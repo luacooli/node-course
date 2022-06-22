@@ -1,0 +1,17 @@
+{
+    "editor.codeLensFontSize": 0,
+    "editor.fastScrollSensitivity": 5,
+    "editor.matchBrackets": "always",
+    "editor.mouseWheelScrollSensitivity": 2,
+    "editor.mouseWheelZoom": true,
+    "editor.padding.bottom": 0,
+    "editor.scrollbar.horizontalScrollbarSize": 8,
+    "editor.scrollbar.verticalScrollbarSize": 14,
+    "files.insertFinalNewline": false,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": true,
+    "breadcrumbs.enabled": true,
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.editor.tabSizing": "fit"
+}
