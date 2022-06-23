@@ -8,7 +8,7 @@
     "editor.scrollbar.horizontalScrollbarSize": 8,
     "editor.scrollbar.verticalScrollbarSize": 14,
     "files.insertFinalNewline": false,
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Monokai++",
     "workbench.sideBar.location": "right",
     "workbench.statusBar.visible": true,
     "breadcrumbs.enabled": true,
