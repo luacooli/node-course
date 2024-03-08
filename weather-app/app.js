@@ -34,15 +34,19 @@ const city = 'Los%20Angeles'
 const token =
   'pk.eyJ1IjoibHVhY29vbGkiLCJhIjoiY2x0aXJudDU0MGlyYjJxcDlhYnpucTg2eCJ9.YAVPM7wcG_fic_8Dwx6Iww'
 
-const mapBoxUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${city}.json?access_token=${token}&limit=${limit}`
+const geoCodeURL = `https://api.mapbox.com/geocoding/v5/mapbox.places/${city}.json?access_token=${token}&limit=${limit}`
 
-request({ mapBoxUrl, json: true }, (err, res) => {
-  console.log(res.body.features)
+request({ url: geoCodeURL, json: true }, (err, res) => {
+  const latitude = res.body.features[0].center[1]
+  const longitude = res.body.features[0].center[0]
+
+  console.log(`Lat: ${latitude}, Lon: ${longitude}`)
 })
 
 // using axios
-axios.get(mapBoxUrl).then(({ data }) => {
-  console.log(
-    `Lat: ${data.features[0].center[1]} \n Lon: ${data.features[0].center[0]}`
-  )
+axios.get(geoCodeURL).then(({ data }) => {
+  const latitude = data.features[0].center[1]
+  const longitude = data.features[0].center[0]
+
+  console.log(`Lat: ${latitude}, Lon: ${longitude}`)
 })
