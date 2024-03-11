@@ -6,6 +6,10 @@ To start the project, you need to have installed on your computer:
 - Npm (comes with node.js installation)
 - postman-request or axios
 
+## Goals
+
+Learning how to code in JavaScript and Node.js. Additionally, I challenged myself to use axios requests in addition to postman-request from the weather app chapter
+
 ## Project structure
 
 The project is divided into several folders from all exercises of the course. Before start any project run:
