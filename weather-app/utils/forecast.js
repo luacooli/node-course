@@ -6,22 +6,22 @@ const forecast = async (lat, lon, callback) => {
   const url = `https://api.weatherapi.com/v1/current.json?key=${token}&q=${lat},${lon}`
 
   // using postman request
-  request({ url, json: true }, (err, res) => {
-    if (err) {
-      callback('Unable to connect to weather service!', undefined)
-    } else if (res.body.error) {
-      callback('Unable to find location', undefined)
-    } else {
-      const condition = res.body.current.condition.text.toLowerCase()
-      const temperature = res.body.current.temp_c
-      const feelslike = res.body.current.feelslike_c
+  // request({ url, json: true }, (err, res) => {
+  //   if (err) {
+  //     callback('Unable to connect to weather service!', undefined)
+  //   } else if (res.body.error) {
+  //     callback('Unable to find location', undefined)
+  //   } else {
+  //     const condition = res.body.current.condition.text.toLowerCase()
+  //     const temperature = res.body.current.temp_c
+  //     const feelslike = res.body.current.feelslike_c
 
-      callback(
-        undefined,
-        `Today the weather is ${condition} with a temperature of ${temperature} degrees out and it feels like ${feelslike} degrees.`
-      )
-    }
-  })
+  //     callback(
+  //       undefined,
+  //       `Today the weather is ${condition} with a temperature of ${temperature} degrees out and it feels like ${feelslike} degrees.`
+  //     )
+  //   }
+  // })
 
   // using axios
   try {

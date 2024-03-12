@@ -10,19 +10,19 @@ const geocode = async (address, callback) => {
   )}.json?access_token=${token}&limit=${limit}`
 
   // using postman request
-  request({ url, json: true }, (err, res) => {
-    if (err) {
-      callback('Unable to connect to geolocation service!', undefined)
-    } else if (res.body.features.length === 0) {
-      callback('Unable to find location. Try another search.', undefined)
-    } else {
-      callback(undefined, {
-        location: res.body.features[0].place_name,
-        latitude: res.body.features[0].center[1],
-        longitude: res.body.features[0].center[0],
-      })
-    }
-  })
+  // request({ url, json: true }, (err, res) => {
+  //   if (err) {
+  //     callback('Unable to connect to geolocation service!', undefined)
+  //   } else if (res.body.features.length === 0) {
+  //     callback('Unable to find location. Try another search.', undefined)
+  //   } else {
+  //     callback(undefined, {
+  //       location: res.body.features[0].place_name,
+  //       latitude: res.body.features[0].center[1],
+  //       longitude: res.body.features[0].center[0],
+  //     })
+  //   }
+  // })
 
   // using axios with trycatch
   try {
