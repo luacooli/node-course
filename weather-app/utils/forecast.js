@@ -6,15 +6,15 @@ const forecast = async (lat, lon, callback) => {
   const url = `https://api.weatherapi.com/v1/current.json?key=${token}&q=${lat},${lon}`
 
   // using postman request
-  // request({ url, json: true }, (err, res) => {
+  // request({ url, json: true }, (err, { body }) => {
   //   if (err) {
   //     callback('Unable to connect to weather service!', undefined)
-  //   } else if (res.body.error) {
+  //   } else if (body.error) {
   //     callback('Unable to find location', undefined)
   //   } else {
-  //     const condition = res.body.current.condition.text.toLowerCase()
-  //     const temperature = res.body.current.temp_c
-  //     const feelslike = res.body.current.feelslike_c
+  //     const condition = body.current.condition.text.toLowerCase()
+  //     const temperature = body.current.temp_c
+  //     const feelslike = body.current.feelslike_c
 
   //     callback(
   //       undefined,
